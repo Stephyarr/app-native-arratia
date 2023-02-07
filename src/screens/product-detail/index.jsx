@@ -2,12 +2,13 @@ import React from "react";
 import { View, Text } from "react-native";
 import { styles } from "./styles";
 
-const productDetail = () =>{
+const ProductDetail = () =>{
     return(
         <View style={styles.container}>
-            <Text>Detalle</Text>
+            <Text>Detalle del Producto</Text>
+            
         </View>
     )
 };
 
-export default productDetail;
+export default ProductDetail;

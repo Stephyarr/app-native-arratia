@@ -3,11 +3,12 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: "center",
-        alignContent: "center"
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#F3DF7C',
     },
     title: {
-        justifyContent: "center",
-        alignContent: "center"
+        fontSize: 18,
     }
+    
 })

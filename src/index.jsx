@@ -1,6 +1,6 @@
 import { useFonts } from "expo-font";
 import { View, ActivityIndicator } from 'react-native';
-import { Categories } from "./screens"
+import AppNavigator from "./navigation";
 
 import { styles } from './styles';
 
@@ -11,18 +11,18 @@ const App = () => {
     'Heebo-Regular': require("../assets/fonts/Heebo-Regular.ttf"),
     'Heebo-SemiBold': require("../assets/fonts/Heebo-SemiBold.ttf"),
     'Heebo-Thin': require("../assets/fonts/Heebo-Thin.ttf"),
-  })
+  });
 
-  if(!loader){
+  if (!loader) {
     return(
       <View style={styles.container}>
-        <ActivityIndicator/>
+        <ActivityIndicator size="large" color="#F080A0"/>
       </View>
     )
-  }
+  };
 
   return (
-    <Categories/>
+    <AppNavigator/>
   )
 }
 
