@@ -1,5 +1,6 @@
 import { useFonts } from "expo-font";
 import { View, ActivityIndicator } from 'react-native';
+import { themes } from "./constants/themes";
 import AppNavigator from "./navigation";
 
 import { styles } from './styles';
@@ -16,7 +17,7 @@ const App = () => {
   if (!loader) {
     return(
       <View style={styles.container}>
-        <ActivityIndicator size="large" color="#F080A0"/>
+        <ActivityIndicator size="large" color={themes.colors.primary}/>
       </View>
     )
   };
