@@ -2,7 +2,7 @@ import React from "react";
 import { SafeAreaView, FlatList} from "react-native";
 import { CategoryItem } from "../../components";
 
-import { THEMES } from "../../constants/themes";
+// import { THEMES } from "../../constants/themes";
 import { styles } from "./styles";
 import { CATEGORIES } from "../../constants/data/index";
 
@@ -12,7 +12,8 @@ const Categories = ({ navigation }) => {
             categoryId: item.id,
             title: item.title,
         });
-    }
+    };
+
     const renderItem = ({ item }) => <CategoryItem item={item} onSelected={onSelected}/>
     const keyExtractor = (item) => item.id.toString();
 
@@ -23,6 +24,7 @@ const Categories = ({ navigation }) => {
              renderItem= {renderItem}
              keyExtractor={keyExtractor}
              style= {styles.containerList}
+             contentContainerStyle= {styles.contentContainerStyle}
             />
         </SafeAreaView>
     )
