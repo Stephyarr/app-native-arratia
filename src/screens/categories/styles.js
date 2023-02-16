@@ -1,17 +1,19 @@
-import { StyleSheet } from "react-native"; 
-import { themes } from "../../constants/themes";
+import { StyleSheet, StatusBar } from "react-native"; 
+import { THEMES } from "../../constants/themes";
 
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: themes.colors.background,
+        backgroundColor: THEMES.colors.background,
+        marginTop: StatusBar.currentHeight,
     },
     title: {
         fontSize: 18,
         fontFamily: 'Heebo-SemiBold',
         padding: 10
+    },
+    containerList: {
+        flex: 1
     }
     
 })
