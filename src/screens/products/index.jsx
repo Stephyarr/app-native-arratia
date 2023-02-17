@@ -12,7 +12,12 @@ const Products = ({ navigation, route }) => {
 
     const filterProducts = PRODUCTS.filter((product) => product.categoryId === categoryId);
 
-    const onSelected = (item) => {};
+    const onSelected = (item) => {
+        navigation.navigate('ProductDetail', {
+            productId: item.id,
+            title: item.title,
+        })
+    };
 
     const renderItem = ({item}) => <ProductItem item={item} onSelected={onSelected}/>;
 
