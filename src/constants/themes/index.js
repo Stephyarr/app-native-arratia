@@ -5,6 +5,6 @@ export const THEMES = {
         background: '#f3df7c',
         title: '#0A0A0A',
         subtitle: '#4F4D49',
-        white: '#FFFFFF'
+        white: '#68d89b'
     }
 };
