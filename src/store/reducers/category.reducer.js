@@ -5,20 +5,21 @@ const { SELECT_CATEGORY } = categoryTypes;
 
 const initialState = {
     categories: CATEGORIES,
-    seleted: null,
-}
+    selected: null,
+};
 
 const categoryReducer = (state = initialState, action) => {
-    switch (action.type ) {
+    switch (action.type) {
         case SELECT_CATEGORY: 
             const indexCategory = state.categories.findIndex(
-                (category) => category.id == action.category
-            )
+                (category) => category.id == action.categoryId
+            );
+
             if(indexCategory == -1) return state;
 
             return {
                 ...state,
-                seleted: state.categories[indexCategory],
+                selected: state.categories[indexCategory],
             }
             default:
                 return state;

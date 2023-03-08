@@ -12,7 +12,7 @@ const Categories = ({ navigation }) => {
     const categories = useSelector((state) => state.category.categories);
 
     const onSelected = (item) => {
-        dispatch(selectCategory(item.id))
+        dispatch(selectCategory(item.id));
         navigation.navigate('Products', {
             title: item.title,
         });
